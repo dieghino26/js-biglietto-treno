@@ -8,11 +8,18 @@ const age = parseInt(prompt("quanti anni hai?"))
 
 //calcolo del prezzo
 let price = kms * 0.21;
+let discount = null
+
 
 if (age < 18) {
-    price = (price * 0.8)
+    discount = 20
 } else if (age > 65) {
-    price = (price * 0.6)
+    discount = 60
+}
+
+
+if (discount) {
+    price = price - (price / 100) * discount
 }
 
 
